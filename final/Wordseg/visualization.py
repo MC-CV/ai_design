@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from main import demo
+from main import demo,demo_ngram
 from Ui_spilit import Ui_MainWindow
 
 
@@ -15,7 +15,7 @@ class ControlBoard(QMainWindow, Ui_MainWindow):
     def bClicked(self):
         try:
             input = self.lineEdit.text()
-            output = demo(input)
+            output = demo_ngram(input)
             self.textBrowser_2.setText("\n\n\n\n\n" + output)
         except:
             self.textBrowser_2.setText("请输入正确的语句。")

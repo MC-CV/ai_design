@@ -241,6 +241,17 @@ def demo(input):
     return output
 
 
+def demo_ngram(input):
+    wordict_path = os.path.join(root_out, "results", "word_dict.model")
+    transdict_path = os.path.join(root_out, "results", "trans_dict.model")
+    model = MaxProbCut(wordict_path, transdict_path)
+    list_temp = model.cut(input)
+    res = ""
+    for i in list_temp:
+        res += i + "/"
+    return res[:-1]
+
+
 def main():
     args = parse_args()
     gold_name = args.dataset + "_test_gold.utf8"
@@ -327,4 +338,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # demo_ngram("我爱吃火锅")
 
