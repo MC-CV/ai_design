@@ -15,4 +15,4 @@
 ##  homework7
     CIFAR-10 分类算法复现，使用ResNet-18和HCGNet。
 ##  final
-    使用前向匹配和HMM实现中文分词，并写GUI展示。
+    实现五种中文分词算法，并写GUI展示。
